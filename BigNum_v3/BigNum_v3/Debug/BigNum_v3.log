@@ -1,0 +1,8 @@
+﻿  BigNum_v3.cpp
+  main_v3.cpp
+d:\paper\bignum_v3\source\main_v3.cpp(12): warning C4101: 'ans_i': 未參考的區域變數
+d:\paper\bignum_v3\source\main_v3.cpp(11): warning C4101: 'y': 未參考的區域變數
+d:\paper\bignum_v3\source\main_v3.cpp(11): warning C4101: 'x': 未參考的區域變數
+  正在產生程式碼...
+d:\paper\bignum_v3\source\bignum_v3.cpp(205): warning C4715: 'operator>': 不是所有控制路徑都傳回值
+  BigNum_v3.vcxproj -> D:\Paper\BigNum_v3\Debug\BigNum_v3.exe
