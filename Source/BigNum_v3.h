@@ -62,14 +62,33 @@ class BigNum {
 		void set_val(string value);
 		// ----- end "set_val" -----
 
-		// ----- begin "=, +=, +, -=, -, *=" -----
+		// ----- begin "=, +=, +, -=, -, *=, *" -----
 		BigNum& operator=(const BigNum &bn);
 		friend BigNum& operator+=(BigNum &bn_1, const BigNum &bn_2);
 		friend BigNum operator+(const BigNum &bn_1, const BigNum &bn_2);
 		friend BigNum& operator-=(BigNum &bn_1, const BigNum &bn_2);
 		friend BigNum operator-(const BigNum &bn_1, const BigNum &bn_2);
 		friend BigNum& operator*=(BigNum &bn_1, const BigNum &bn_2);
-		// ----- end "=, +=, +, -=, -, *=" -----
+		friend BigNum operator*(const BigNum &bn_1, const BigNum &bn_2);
+		// ----- end "=, +=, +, -=, -, *=, *" -----
+
+		// ----- begin "/=, /, %=, %, sf_lf, sf_rt" -----
+		// e.g. 10 / 13 / 10 = (10 / 13) / 10 
+		friend BigNum& operator/=(BigNum &bn_1, const BigNum &bn_2);
+		friend BigNum operator/(const BigNum &bn_1, const BigNum &bn_2);
+		friend BigNum& operator%=(BigNum &bn_1, const BigNum &bn_2);
+		friend BigNum operator%(const BigNum &bn_1, const BigNum &bn_2);
+		/*
+			sf_lf and sf_rt are used for division function.
+			e.g. real val 45. shift left 2 digits. 4500.
+		*/
+		BigNum sf_lf(int sf_len);
+		BigNum sf_rt(int sf_len);
+		// ----- end "/=, /, %=, %, sf_lf, sf_rt" -----
+
+		// ----- begin "power" -----
+		friend BigNum power(const BigNum &bn_1, const BigNum &bn_2);
+		// ----- end "power" -----
 
 		// ----- begin "==, >, <, >=, <=" -----
 		friend bool operator==(const BigNum &bn_1, const BigNum &bn_2);

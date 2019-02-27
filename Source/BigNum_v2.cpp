@@ -456,6 +456,7 @@ BigNum BigNum::mul_int(int tmp_int)
 }
 // ----- end "/, %, sf_lf, sf_rt, mul_int" -----
 
+// UNDONE
 // ----- begin "ex_mod, ^" -----
 BigNum BigNum::ex_mod(BigNum e, BigNum n)
 {
